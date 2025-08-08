@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .btn {
+        padding: 9px 8px;
+        background-color: rgba(5, 51, 126, 0.927);
+        color: white;
+        border-radius: 10px;
+        font-weight: 700;
+        border: 1px solid ;
+        box-shadow: 0 3px rgba(240, 5, 40, 0.986);
+        transition: all ease 0.3s;
+      }
+      .btn:hover {
+        box-shadow: none;
+        transform: translateY(3px);
+        background-color: rgba(158, 20, 38, 0.927);
+      }
+      .strike {
+        text-decoration: line-through;
+      }
+      .get-bold {
+        font-weight: 700;
+      }
+      .get-italics {
+        font-style: italic;
+        /* font: oblique;
+        font-weight: 900; */
+      }
+      .hide-and-show {
+        display: none;
+      }
+      .heading-color {
+        color: deeppink;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 id="course">JS</h2>
+    <button onclick="changeColor();">Change</button><br><br>
+
+
+    <button class="blue-btn btn-large" id="btn1" onclick="transformButtons();">
+      Button 1
+    </button>
+    <button class="blue-btn" id="btn2">Button 2</button>
+    <button class="blue-btn" id="btn3">Button 3</button>
+    <button class="blue-btn" id="btn4">Button 4</button>
+
+    <ol>
+      Best Players
+      <button onclick="boldenText();">Bold</button>
+      <button onclick="italicizeText();">Italics</button>
+      <li class="player bold italics">Dembele</li>
+      <li class="player bold italics">Salah</li>
+      <li class="player bold italics">Nuno Mendes</li>
+      <li class="player bold italics">Vitinha</li>
+      <li class="player bold italics">Raphinha</li>
+    </ol>
+    <ol>
+      TASKS
+      <button onclick="strikeThrough();">done</button>
+      <li class="task">wash</li>
+      <li class="task">brush</li>
+      <li class="task">sleep</li>
+      <li class="task">eat</li>
+      <li class="task">play</li>
+    </ol>
+
+    <button onclick="hideShowImg();">Hide/Show</button><br /><br />
+    <img
+      class="scape"
+      src="/pexels-simon73-1183099.jpg"
+      width="50%"
+      alt="img"
+    /><br /><br />
+
+
+    <script type="text/javascript">
+      let lastButton = document.getElementById("btn4");
+      console.log(lastButton);
+
+      const allBlueButtons = document.getElementsByClassName("blue-btn");
+      console.log(allBlueButtons[2]);
+
+      let somePlayer = document.getElementsByClassName("player");
+      for (let i of somePlayer) {
+        console.log(i.textContent.toUpperCase());
+      }
+      function transformButtons() {
+        const allButtons = document.getElementsByTagName("button");
+
+        for (let button of allButtons) {
+          button.classList.toggle("btn");
+        }
+      }
+      function strikeThrough() {
+        const allTasks = document.getElementsByClassName("task");
+        for (let li of allTasks) {
+          li.classList.toggle("strike");
+        }
+      }
+      function boldenText() {
+        const bolden = document.getElementsByClassName("bold");
+        for (let i of bolden) {
+          i.classList.toggle("get-bold");
+        }
+      }
+      function italicizeText() {
+        const italicize = document.getElementsByClassName("italics");
+        for (let i of italicize) {
+          i.classList.toggle("get-italics");
+        }
+      }
+      function hideShowImg() {
+        const visibility = document.getElementsByClassName("scape");
+        for (let i of visibility) {
+          i.classList.toggle("hide-and-show");
+        }
+      }
+      function changeColor() {
+        const colorChange = document.getElementsByTagName("h2");
+        for (let i of colorChange) {
+          i.classList.toggle("heading-color");
+        }
+      }
+
+
+    </script>
+  </body>
+</html>
