@@ -29,7 +29,7 @@
     <button onclick="showModal();">Show Modal</button>
     <div class="modal">
         <div class="modal-content">
-            <button style="padding: 5px;">&times</button>
+            <button style="padding: 5px;" class="close-modal">&times</button>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing.
             </p>
@@ -37,12 +37,6 @@
     </div>
 
 
-    <script>
-        function showModal(){
-            console.log('work');
-            
-        document.querySelector('.modal').style.display = 'flex';
-        }
-    </script>
+<script src="modal.js"></script>
 </body>
 </html>
