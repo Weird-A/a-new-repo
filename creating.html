@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        font-family: 'big shoulders';
+        background-color: blanchedalmond;
+        gap: 20px;
+    }
+    h1{
+        text-align: center;
+    }
+    li{
+        font-weight: 600;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: antiquewhite;
+        border-radius: 15px;
+        box-shadow: 0 0 8px rgba(0, 0, 0, .539);
+    }
+    .comment-section{
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        /* align-items: center; */
+        justify-content: center;
+        border: 1px solid red;
+
+    }
+</style>
+<body>
+    <div class="container">
+        <h1>Creating Elements</h1>
+
+        <input type="text">
+        <button>Add Item</button><br><br>
+
+        <ul>
+            List of Players
+        </ul>
+    </div>
+
+
+    <div class="container">
+
+        <p>Username;</p><input type="text">
+        <p>Comment;</p><input type="text"><br>
+        <button class="comment" type="submit">Submit</button>
+        
+        <div class="comment-section">
+
+        </div>
+    </div>
+
+    <script src="creating.js"></script>
+</body>
+</html>

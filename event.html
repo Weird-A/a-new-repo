@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Biki a cikin JS</title>
+</head>
+<body>
+    <button style="background-color: #6664;" onclick="alert('button clicked')">Click Me</button>
+    <button onclick="multiplyPara();">Slide Box</button>
+    <div class="box" onmouseover="changeBgColor();" onmouseout="revertBgColor()"></div>
+
+    <p>Something different</p>
+
+    <script type="text/javascript">
+        let changeBgColor = () => {
+            document.body.style.backgroundColor = '#d45gh34';
+            document.body.style.backgroundImage ='';
+        }
+        function revertBgColor(){
+            document.body.style.backgroundColor = 'transparent';
+
+        }
+        const slideBox = function(){
+            document.getElementsByClassName('box')[0].classList.add('animation-slide')
+        }
+        function multiplyPara(){
+            let doublePara = document.body.getElementsByTagName('p');
+            let tw0Para = doublePara.repeat();
+        }
+    </script>
+</body>
+</html>
