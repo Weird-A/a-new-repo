@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NOTE BOARD</title>
+
+    <style>
+      body {
+        font-family: "Big Shoulders";
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 10px;
+      }
+      button {
+        font-family: "Big Shoulders";
+      }
+      #add-note {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #053407;
+        color: rgb(64, 235, 30);
+        border: none;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        box-shadow: 0 3px 8px gray;
+      }
+      #add-note:hover {
+        background-color: #45a049;
+        color: rgba(10, 82, 10, 0.97);
+      }
+      #note-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        max-width: 1200px;
+      }
+      .note {
+        width: 200px;
+        min-height: 150px;
+        padding: 15px;
+        font-family: "Big Shoulders";
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .note-contents {
+        flex-grow: 1;
+        margin-bottom: 10px;
+      }
+      .note-input {
+        width: 100%;
+        min-height: 100px;
+        resize: none;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 8px;
+        font-size: 14px;
+        font-family: "Agency FB";
+        background-color: rgba(255, 255, 255, 0.9);
+        box-sizing: border-box;
+        margin-bottom: 10px;
+      }
+      .note-input:focus {
+        outline: none;
+        border-color: #ffffff;
+        box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+      }
+      .remove-btn {
+        padding: 5px 10px;
+        height: 2.5rem;
+        font-size: 14px;
+        cursor: pointer;
+        background-color: #f4393955;
+        color: yellow;
+        border: none;
+        border-radius: 3px;
+        align-self: flex-end;
+      }
+      .remove-btn:hover {
+        background-color: #cc0000;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="add-note">Add Note</button>
+
+    <div id="note-container"></div>
+
+    <script src="note-board.js"></script>
+  </body>
+</html>
