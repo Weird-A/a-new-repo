@@ -20,6 +20,9 @@
     li{
         font-weight: 600;
     }
+    button{
+        width: 100px;
+    }
     .container{
         display: flex;
         flex-direction: column;
@@ -36,6 +39,14 @@
         justify-content: center;
         border: 1px solid red;
 
+    }
+    .box{
+        height: 300px;
+        width: 300px;
+        padding: 20px;
+        background-color: cornsilk;
+        margin-top: 20px;
+        margin-inline: auto;
     }
 </style>
 <body>
@@ -60,6 +71,13 @@
         <div class="comment-section">
 
         </div>
+    </div>
+
+    <button class="before-end">Before End</button>
+    <button class="after-begin">After Begin</button>
+    <button id="remove">Remove</button>
+    <div class="box">
+
     </div>
 
     <script src="creating.js"></script>
